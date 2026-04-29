@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do Some Dogs Bite More?</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+
+        <section class="hero">
+            <p class="kicker">DATA 1500 Final Project</p>
+            <h1>Do Some Dogs Bite More,<br>
+                Or Are They Just More Popular?</h1>
+            <p class="dek">Comparing New York City bite reports with dog ownership records reveals why raw rankings can be misleading.</p>
+            <p class="byline">By Penggao Gu</p>
+        </section>
+
+        <section class="text-block">
+            <h2>The Problem With Raw Rankings</h2>
+
+            <p>New York City publishes thousands of dog bite reports, and those rankings often shape public perception about which dogs are considered dangerous.</p>
+
+            <p>But raw bite totals do not tell the full story. A breed group may appear frequently in bite reports simply because it is more common across the city. Popular dogs naturally create more interactions and more chances for incidents to be reported.</p>
+
+            <p>To better understand relative bite risk, this project compares reported bite incidents with licensed dog ownership records across New York City. By combining the numerator, bite reports, with the denominator, dog population, we can ask a more meaningful question:</p>
+
+            <p class="question">Which dogs bite more — or less — than expected?</p>
+
+            <p>Dog bite data may reflect not only dogs themselves, but also ownership patterns, neighborhood context, and reporting behavior.</p>
+        </section>
+
+        <section class="dog-strip">
+            <h2>Four Familiar Faces of New York’s Dog Population</h2>
+
+            <div class="dog-grid">
+                <figure>
+                    <img src="images/toyGroup.png" alt="Representative Toy Group dog">
+                    <figcaption>Toy</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/terrierGroup.png" alt="Representative Terrier Group dog">
+                    <figcaption>Terrier</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/sportingGroup.png" alt="Representative Sporting Group dog">
+                    <figcaption>Sporting</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/nonSportingGroup.png" alt="Representative Non-Sporting Group dog">
+                    <figcaption>Non-Sporting</figcaption>
+                </figure>
+            </div>
+
+            <p class="caption">Representative examples from four major American Kennel Club breed groups used throughout this analysis. From left to right: Toy, Terrier, Sporting, and Non-Sporting.</p>
+        </section>
+
+        <section class="text-block">
+            <h2>Who Is Most Common?</h2>
+
+            <p>New York’s dog population is far from evenly distributed. Some breed groups appear across the city much more often than others, which means any raw ranking of bite incidents will naturally favor common dogs before behavior is even considered.</p>
+
+            <p>That matters because popularity creates exposure. More dogs often means more walks, more park visits, more neighbors, more strangers, and more opportunities for incidents to be reported. Before asking which dogs bite the most, we first need to understand which dogs are most common.</p>
+        </section>
+
+        <section class="chart-section">
+            <img class="chart" src="images/Rplot1.png" alt="Stacked bar chart showing licensed dog shares by breed group across New York City boroughs. Toy Group leads in every borough.">
+        </section>
+
+        <section class="text-block">
+            <p>Based on the data, Toy groups lead everywhere, but the rest of the rankings vary more. Sporting dogs rank higher in some boroughs, while Terrier groups rise or fall by location. Ownership patterns likely reflect housing type, available space, and neighborhood preferences.</p>
+
+            <p>Most importantly, this chart establishes the denominator. If one group is much more common than another, higher bite totals may reflect population size rather than higher risk.</p>
+        </section>
+
+        <section class="text-block">
+            <h2>Who Appears Most in Bite Reports?</h2>
+
+            <p>When we shift from ownership to bite reports, the ranking changes quickly. Terrier groups move to the top of the list, while Toy groups fall well below their ownership share. The dogs seen most often in city registrations are not the same dogs appearing most often in bite reports.</p>
+        </section>
+
+        <section class="chart-section">
+            <img class="chart" src="images/Rplot2.png" alt="Horizontal bar chart showing reported dog bite incidents by breed group. Terrier Group has the most reported bite incidents.">
+        </section>
+
+        <section class="text-block">
+            <p>At first glance, that may seem clear. But raw counts still mix two forces: how common a group is, and how often incidents are reported once those dogs are present.</p>
+
+            <p>From 2015 through 2021, Terrier groups account for more reported bite incidents than any other breed category in the dataset. That is notable because they did not lead ownership in any borough shown above. Meanwhile, Toy groups dominate registrations citywide but rank much lower in bite totals.</p>
+
+            <p>The gap between population share and incident totals is exactly why ownership-adjusted comparisons matter. Raw counts suggest something unusual, but they do not tell us whether a group appears often because it is common, because it is overrepresented in incidents, or both.</p>
+        </section>
+
+        <section class="text-block">
+            <h2>After Adjusting for Ownership</h2>
+
+            <p>The next chart compares each group’s share of licensed dogs with its share of reported bite incidents. If incidents followed popularity alone, every point would fall near the diagonal reference line. Groups above the line appear in bite reports more often than expected, while groups below the line appear less often than expected.</p>
+        </section>
+
+        <section class="chart-section featured-chart">
+            <img class="chart" src="images/Rplot3.png" alt="Scatter plot comparing share of licensed dogs with share of bite reports by breed group. Terrier Group appears above the expected line.">
+        </section>
+
+        <section class="text-block">
+            <p>Even after adjusting for ownership, Terrier groups remain clearly above the expected line. Their share of reported bite incidents exceeds their share of the licensed dog population, suggesting that the earlier ranking was not driven by popularity alone.</p>
+
+            <p>Toy groups show the opposite pattern. Despite dominating ownership across the city, they account for a much smaller share of bite reports than their population size would predict. Most other groups sit closer to the diagonal, where bite share more closely matches ownership share.</p>
+
+            <p>This chart provides the clearest answer in the project. After accounting for how common each group is, Terrier dogs still stand out as the most overrepresented group in bite reports.</p>
+        </section>
+
+        <section class="text-block">
+            <h2>Where Does the Pattern Concentrate?</h2>
+
+            <p>If that elevated pattern is real citywide, the next question becomes where those incidents are most concentrated.</p>
+        </section>
+
+        <section class="chart-section">
+            <img class="chart" src="images/Rplot4.png" alt="Map of New York City ZIP codes showing Terrier Group share of reported dog bites. Several high-share areas appear in the Bronx and Queens.">
+        </section>
+
+        <section class="text-block">
+            <p>The citywide pattern also has a geographic dimension. Several of the highest Terrier shares appear in parts of the Bronx and Queens, where Terrier-related incidents make up a large portion of all reported bites.</p>
+
+            <p>That does not necessarily mean those neighborhoods have the most dangerous dogs. Local patterns may also reflect ownership mix, housing conditions, pedestrian activity, park access, complaint behavior, and reporting rates.</p>
+
+            <p>Still, the map helps identify where Terrier-related incidents are most concentrated. Those neighborhoods may deserve closer attention in future prevention efforts.</p>
+        </section>
+
+        <section class="conclusion">
+            <h2>Conclusion</h2>
+
+            <p>Taken together, these charts show that raw rankings alone oversimplify the story. After adjusting for ownership, Terrier groups stand out most clearly — and some neighborhoods experience that pattern more strongly than others.</p>
+
+            <p>At the same time, the data should not be read as a simple ranking of “good” or “bad” dogs. Bite reports are shaped by city life: density, housing, walking patterns, public space, reporting behavior, and the kinds of dogs people choose to live with.</p>
+
+            <p class="ending">Dog bite data may reveal as much about cities and people as it does about dogs.</p>
+        </section>
+
+        <section class="sources">
+            <h2>Sources and Methods</h2>
+
+            <p>This project uses New York City dog licensing records and New York City dog bite report records. Breed names were cleaned and standardized into American Kennel Club breed group categories. Unknown, mixed-breed, and unmatched bite records were excluded from the breed-group comparisons. ZIP codes with fewer than eight bite reports were excluded from the map to reduce instability from very small counts.</p>
+
+            <p>Data sources:
+                <a href="https://data.cityofnewyork.us/Health/NYC-Dog-Licensing-Dataset/nu7n-tubp" target="_blank">NYC Dog Licensing Dataset</a>,
+                <a href="https://data.cityofnewyork.us/Health/DOHMH-Dog-Bite-Data/rsgh-akpg" target="_blank">NYC Dog Bite Reports Dataset</a>,
+                <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html" target="_blank">U.S. Census ZCTA boundary files</a>, and
+                <a href="https://www.nyc.gov/content/planning/pages/resources/datasets/neighborhood-tabulation" target="_blank">NYC Neighborhood Tabulation Areas</a>.
+            </p>
+        </section>
+
+    </main>
+</body>
+</html>
